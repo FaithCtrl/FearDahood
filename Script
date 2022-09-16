@@ -1,10 +1,3 @@
-getgenv().Settings = {
-    ['Controller'] = 449877077, -- your mains id
-    ['Prefix'] = '.', -- Chat Prefix
-    ['Name'] = 'ChristinaParsons9', -- your username
-}
-
-
 --loading noti
 game.StarterGui:SetCore("SendNotification",{
     Title = "Fear dahood";
@@ -113,7 +106,7 @@ end)
 --freeze cmd
 Chatted:Connect(function(Message)
     if (game:GetService("Players")[Message.FromSpeaker].UserId) == getgenv().Settings.Controller then
-        if Message.Message:lower() == getgenv().Settings.Prefix.."freeze on" then
+        if Message.Message:lower() == getgenv().Settings.Prefix.."freeze" then
             if game.Players.LocalPlayer.UserId == getgenv().Settings.Controller then
 				game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
             end
