@@ -59,7 +59,7 @@ end)
 Chatted:Connect(function(Message)
     if (game:GetService("Players")[Message.FromSpeaker].UserId) == getgenv().Settings.Controller then
         if Message.Message:lower() == getgenv().Settings.Prefix.."stop" then
-            if game.Players.LocalPlayer.UserId ~= getgenv().Settings.Controller then
+            if game.Players.LocalPlayer.UserId == getgenv().Settings.Controller then
                 getgenv().drop = false
             end
         end
