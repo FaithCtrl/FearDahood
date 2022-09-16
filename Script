@@ -115,7 +115,7 @@ Chatted:Connect(function(Message)
 end)
 Chatted:Connect(function(Message)
     if (game:GetService("Players")[Message.FromSpeaker].UserId) == getgenv().Settings.Controller then
-        if Message.Message:lower() == getgenv().Settings.Prefix.."freeze off" then
+        if Message.Message:lower() == getgenv().Settings.Prefix.."unfreeze" then
             if game.Players.LocalPlayer.UserId == getgenv().Settings.Controller then
 				game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
             end
